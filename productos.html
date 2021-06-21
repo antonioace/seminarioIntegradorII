@@ -373,7 +373,7 @@
     <!--script for this page-->
     <!-- Script Cargar Productos -->
     <script>
-        const url = 'http://localhost:8080/producto/todos';
+        const url = 'https://api-tienda-api.herokuapp.com/producto/todos';
 
         fetch(url)
             .then(
@@ -414,7 +414,7 @@
                 unidadesDisponibles: $("#uDisponibles").val()
             }
 
-            fetch('http://localhost:8080/producto/nuevo', {
+            fetch('https://api-tienda-api.herokuapp.com/producto/nuevo', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {
@@ -443,7 +443,7 @@
         
        let id = fila.children[0].innerHTML
        
-        fetch( `http://localhost:8080/producto/eliminar/`+id, {
+        fetch( `https://api-tienda-api.herokuapp.com/producto/eliminar/`+id, {
                 method: 'GET',
               
                 headers: {
